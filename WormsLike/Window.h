@@ -8,6 +8,9 @@ namespace Engine
 	public:
 		Window();
 		int start();
+	private:
+		int init();
+		int close();
 	};
 }
 
