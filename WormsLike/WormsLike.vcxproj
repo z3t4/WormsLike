@@ -71,6 +71,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Renderer.h" />
+    <ClCompile Include="GameWindow.h" />
+    <ClCompile Include="Rope.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BackgroundElement.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelManger.h" />
+    <ClInclude Include="Rope.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="GraphicalElement.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

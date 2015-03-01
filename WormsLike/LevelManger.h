@@ -4,7 +4,8 @@
 namespace GameLogic
 {
 
-	class LevelManager {
+	class LevelManager 
+	{
 
 	public:
 

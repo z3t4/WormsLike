@@ -13,10 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Engine">
+      <UniqueIdentifier>{b55f6df8-f078-463b-954a-311506990cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\GameLogic">
+      <UniqueIdentifier>{4c2ca5b5-555e-45e9-be03-a084ab18a04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Engine">
+      <UniqueIdentifier>{e60e754c-e2a4-4aa4-a050-3ca4a8bc4f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\GameLogic">
+      <UniqueIdentifier>{9039752b-9c97-4d1e-8a66-4b2914383672}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Rope.cpp">
+      <Filter>Fichiers sources\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GraphicalElement.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManger.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Rope.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundElement.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

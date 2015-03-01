@@ -4,7 +4,8 @@
 namespace GameLogic
 {
 
-	class Rope {
+	class Rope 
+	{
 
 	public:
 

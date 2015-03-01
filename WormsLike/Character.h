@@ -4,7 +4,8 @@
 namespace GameLogic
 {
 
-	class Character {
+	class Character 
+	{
 
 	public:
 

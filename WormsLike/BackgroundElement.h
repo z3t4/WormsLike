@@ -4,7 +4,8 @@
 namespace GameLogic
 {
 
-	class BackgroundElement {
+	class BackgroundElement 
+	{
 
 	public:
 
