@@ -5,13 +5,15 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "MenuWindow.h"
+
 namespace Engine
 {
 	const Uint32 fps = 40;
 	const Uint32 minframetime = 1000 / fps;
 	SDL_Window* gWindow = NULL;
 
-	Window::Window()
+	Window::Window() : m_window(MenuWindow())
 	{
 
 	}
@@ -36,6 +38,7 @@ namespace Engine
 				{
 					quit = true;
 				}
+				m_window.onEvent(e);
 			}
 
 		}

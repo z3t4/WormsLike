@@ -71,6 +71,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuWindow.cpp" />
     <ClCompile Include="Renderer.h" />
     <ClCompile Include="GameWindow.h" />
     <ClCompile Include="Rope.cpp" />
@@ -81,7 +82,9 @@
     <ClInclude Include="Character.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelManger.h" />
+    <ClInclude Include="MenuWindow.h" />
     <ClInclude Include="Rope.h" />
+    <ClInclude Include="ScenarioWindow.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="GraphicalElement.h" />
   </ItemGroup>

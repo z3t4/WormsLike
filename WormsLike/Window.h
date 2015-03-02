@@ -1,6 +1,8 @@
 #ifndef _WINDOW_H
 #define _WINDOW_H
 
+#include "ScenarioWindow.h"
+
 namespace Engine 
 {
 	class Window
@@ -11,6 +13,7 @@ namespace Engine
 	private:
 		int init();
 		int close();
+		ScenarioWindow& m_window;
 	};
 }
 

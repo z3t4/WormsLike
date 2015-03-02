@@ -42,6 +42,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="MenuWindow.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GraphicalElement.h">
@@ -64,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="BackgroundElement.h">
       <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="ScenarioWindow.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuWindow.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
