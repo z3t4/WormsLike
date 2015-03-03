@@ -29,8 +29,6 @@ namespace Engine
 		// Main loop
 		while (!quit)
 		{
-
-			//Create window 
 			//EventPoll loop
 			while (SDL_PollEvent(&e) != 0)
 			{
@@ -38,7 +36,7 @@ namespace Engine
 				{
 					quit = true;
 				}
-				m_window.onEvent(e);
+		//		m_window.onEvent(e);
 			}
 
 		}
