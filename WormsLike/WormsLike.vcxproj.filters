@@ -45,6 +45,9 @@
     <ClCompile Include="MenuWindow.cpp">
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GraphicalElement.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="MenuWindow.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
