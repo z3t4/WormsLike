@@ -8,6 +8,7 @@ namespace GameLogic
 		setPosX(x);
 		setPosY(y);
 	}
+
 	int Hero::moveCharacter(SDL_Event e)
 	{
 		switch (e.key.keysym.sym)

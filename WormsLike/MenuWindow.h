@@ -9,6 +9,8 @@ namespace Engine
 	{
 	public:
 		MenuWindow();
+		virtual void initDrawableElements(SDL_Renderer* renderer);
+		virtual void draw(SDL_Renderer* renderer);
 		virtual void onEvent(const SDL_Event& e);
 	};
 }

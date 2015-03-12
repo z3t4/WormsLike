@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\GameLogic">
       <UniqueIdentifier>{9039752b-9c97-4d1e-8a66-4b2914383672}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\GameLogic\DevScenario">
+      <UniqueIdentifier>{a9be8566-02af-4b2c-b8eb-27b04baecec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\GameLogic\DevScenario">
+      <UniqueIdentifier>{472ca301-2504-4f4a-93b1-1c6211f1de65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,7 +52,19 @@
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Hero.cpp">
+      <Filter>Fichiers sources\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundElement.cpp">
       <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoader.cpp">
+      <Filter>Fichiers sources\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawTestMap.cpp">
+      <Filter>Fichiers sources\GameLogic\DevScenario</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +97,18 @@
     </ClInclude>
     <ClInclude Include="Hero.h">
       <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLoader.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawTestMap.h">
+      <Filter>Fichiers d%27en-tête\GameLogic\DevScenario</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawable.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -6,6 +6,10 @@
 #include <iostream>
 
 #include "MenuWindow.h"
+#include "MapLoader.h"
+#include "Map.h"
+
+#include "DrawTestMap.h"
 
 namespace Engine
 {
@@ -13,9 +17,16 @@ namespace Engine
 	const Uint32 minframetime = 1000 / fps;
 	SDL_Window* gWindow = NULL;
 
-	Window::Window() : m_window(MenuWindow())
+	Window::Window() : window(new Engine::MenuWindow())
+	//Window::Window() : window(new GameLogic::DrawTestMap())
 	{
+		
+	}
 
+	Window::~Window()
+	{
+		if (window) delete window;
+		if (mainRenderer) SDL_DestroyRenderer(mainRenderer);
 	}
 
 	int Window::start()
@@ -36,17 +47,19 @@ namespace Engine
 				{
 					quit = true;
 				}
-		//		m_window.onEvent(e);
+				window->onEvent(e);
+				window->draw(mainRenderer);
 			}
 
 		}
+		this->close();
 		return 0;
 	}
 
 	int Window::init()
 	{
 		int status = 0;
-
+		
 		//Initialize SDL
 		if (SDL_Init(SDL_INIT_VIDEO) < 0)
 		{
@@ -62,6 +75,8 @@ namespace Engine
 				printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
 				status = 1;
 			}
+			mainRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+			window->initDrawableElements(mainRenderer);
 		}
 
 		return status;
@@ -70,6 +85,8 @@ namespace Engine
 	int Window::close()
 	{
 		//Destroy window
+		SDL_DestroyRenderer(mainRenderer);
+		mainRenderer = NULL;
 		SDL_DestroyWindow(gWindow);
 		gWindow = NULL;
 

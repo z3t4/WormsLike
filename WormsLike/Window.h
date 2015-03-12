@@ -3,17 +3,24 @@
 
 #include "ScenarioWindow.h"
 
+/*
+ *	TODO:
+ *		-Exception à la place de init
+ */
+
 namespace Engine 
 {
 	class Window
 	{
 	public:
 		Window();
+		~Window();
 		int start();
 	private:
 		int init();
 		int close();
-		ScenarioWindow& m_window;
+		ScenarioWindow* window;
+		SDL_Renderer* mainRenderer;
 	};
 }
 

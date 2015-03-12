@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)\Libs\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\Libs\SDL2-2.0.3\include;$(ProjectDir)\Libs\tinyxml;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;$(ProjectDir)\Libs\tinyxml\Releasetinyxml;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -50,7 +50,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -70,8 +70,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BackgroundElement.cpp" />
+    <ClCompile Include="DrawTestMap.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="MenuWindow.cpp" />
     <ClCompile Include="Renderer.h" />
     <ClCompile Include="GameWindow.h" />
@@ -81,9 +85,13 @@
   <ItemGroup>
     <ClInclude Include="BackgroundElement.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Drawable.h" />
+    <ClInclude Include="DrawTestMap.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelManger.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapLoader.h" />
     <ClInclude Include="MenuWindow.h" />
     <ClInclude Include="Rope.h" />
     <ClInclude Include="ScenarioWindow.h" />

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Map name="TestMap">
+	<Background src="" />
+	<Element type="grab" x="0" y="0" sizeX="10" sizeY="10" src="C:\Users\jérome\Documents\git\WormsLike\WormsLike\Images\black.bmp" />
+</Map>
