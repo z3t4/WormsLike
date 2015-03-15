@@ -1,4 +1,4 @@
-#ifndef _MAPLOADER_H
+/* #ifndef _MAPLOADER_H
 #define _MAPLOADER_H
 
 #include <windows.h>
@@ -20,7 +20,7 @@
  *		- Sécuriser le format
  */
 
-namespace GameLogic
+/* namespace GameLogic
 {
 	class MapLoader
 	{

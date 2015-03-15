@@ -1,4 +1,4 @@
-#ifndef _DRAWTESTMAP_H
+/* #ifndef _DRAWTESTMAP_H
 #define _DRAWTESTMAP_H
 
 #include "Map.h"
@@ -17,4 +17,4 @@ namespace GameLogic
 		GameLogic::Map m_map;
 	};
 }
-#endif
+#endif */

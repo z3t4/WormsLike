@@ -2,36 +2,37 @@
 #define CHARACTER_H
 
 #include <SDL_events.h>
+#include "Drawable.h"
 
 namespace GameLogic
 {
 
-	class Character 
+	class Character : public Engine::Drawable
 	{
 
 	public:
 		virtual int moveCharacter(SDL_Event e) = 0;
-		void setPosX(int x)
+		/*virtual void setBoxX(int x)
 		{
-			char_x = x;
+			m_box= x;
 		}
-		void setPosY(int y)
+		virtual void setBoxY(int y)
 		{
-			char_y = y;
+
 		}
-		int getPosX()
+		virtual void setBoxH(int h)
 		{
-			return char_x;
+
 		}
-		int getPosY()
+		virtual void setBoxW(int w)
 		{
-			return char_y;
-		}
+
+		} */
+
 	private:
 
 	protected:
-		int char_x;
-		int char_y;
+		SDL_Rect m_box;
 	};
 
 }

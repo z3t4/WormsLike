@@ -1,13 +1,14 @@
 #include "Window.h"
 
 #include <SDL.h>
-
+#include <SDL_image.h>
 #include <cstdlib>
 #include <iostream>
 
 #include "MenuWindow.h"
-#include "MapLoader.h"
-#include "Map.h"
+//#include "MapLoader.h"
+//#include "Map.h"
+#include "TestHero.h"
 
 #include "DrawTestMap.h"
 
@@ -16,8 +17,9 @@ namespace Engine
 	const Uint32 fps = 40;
 	const Uint32 minframetime = 1000 / fps;
 	SDL_Window* gWindow = NULL;
+	SDL_Surface* gScreenSurface = NULL;
 
-	Window::Window() : window(new Engine::MenuWindow())
+	Window::Window() : window(new GameLogic::TestHero())
 	//Window::Window() : window(new GameLogic::DrawTestMap())
 	{
 		
@@ -47,8 +49,9 @@ namespace Engine
 				{
 					quit = true;
 				}
-				window->onEvent(e);
-				window->draw(mainRenderer);
+
+			 	window->onEvent(e);
+				window->draw();
 			}
 
 		}
@@ -75,8 +78,24 @@ namespace Engine
 				printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
 				status = 1;
 			}
+
+			//Initialize PNG loading
+			int imgFlags = IMG_INIT_PNG;
+			if (!(IMG_Init(imgFlags) & imgFlags))
+			{
+				printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+				status = 1;
+			}
+			else
+			{
+				//Get window surface
+				gScreenSurface = SDL_GetWindowSurface(gWindow);
+			}
+
 			mainRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-			window->initDrawableElements(mainRenderer);
+			window->setWindowSettings(gWindow, mainRenderer);
+			window->initDrawableElements();
+			
 		}
 
 		return status;
