@@ -8,8 +8,8 @@ namespace Engine
 	class Drawable
 	{
 	public: 
-		virtual void initDrawableElements() =0;
-		virtual void draw() =0;
+		virtual void initDrawableElements(SDL_Renderer* renderer) = 0;
+		virtual void draw(SDL_Renderer* renderer) = 0;
 	};
 }
 #endif

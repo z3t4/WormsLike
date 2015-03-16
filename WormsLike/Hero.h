@@ -12,14 +12,13 @@ namespace GameLogic
 	public : 
 		Hero::Hero(int x, int y);
 		virtual int moveCharacter(SDL_Event e);
-		virtual void initDrawableElements();
-		virtual void draw();
-		void setHeroWindowSettings(SDL_Window* window, SDL_Renderer* renderer);
+		virtual void initDrawableElements(SDL_Renderer* renderer);
+		virtual void draw(SDL_Renderer* renderer);
+
 	private :
 		std::string texturePath;
-		SDL_Renderer* m_renderer;
+	
 		SDL_Texture* m_texture;
-		SDL_Surface* m_surface;
 		SDL_Window* m_window;
 	};
 

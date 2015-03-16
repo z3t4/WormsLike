@@ -51,7 +51,7 @@ namespace Engine
 				}
 
 			 	window->onEvent(e);
-				window->draw();
+				window->draw(mainRenderer);
 			}
 
 		}
@@ -93,8 +93,8 @@ namespace Engine
 			}
 
 			mainRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-			window->setWindowSettings(gWindow, mainRenderer);
-			window->initDrawableElements();
+			//window->setWindowSettings(gWindow, mainRenderer);
+			window->initDrawableElements(mainRenderer);
 			
 		}
 

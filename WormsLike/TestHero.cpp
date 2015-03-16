@@ -8,19 +8,14 @@ namespace GameLogic
 	{
 	}
 
-	void TestHero::initDrawableElements()
+	void TestHero::initDrawableElements(SDL_Renderer* renderer)
 	{
-		m_hero.initDrawableElements();
+		m_hero.initDrawableElements(renderer);
 	}
 
-	void TestHero::draw()
+	void TestHero::draw(SDL_Renderer* renderer)
 	{
-		m_hero.draw();
-	}
-
-	void TestHero::setWindowSettings(SDL_Window* window, SDL_Renderer* renderer)
-	{
-		m_hero.setHeroWindowSettings(window, renderer);
+		m_hero.draw(renderer);
 	}
 
 	void TestHero::onEvent(const SDL_Event &e)

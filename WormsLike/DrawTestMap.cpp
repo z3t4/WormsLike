@@ -1,4 +1,4 @@
-/* #include "DrawTestMap.h"
+#include "DrawTestMap.h"
 #include "MapLoader.h"
 
 namespace GameLogic
@@ -21,4 +21,4 @@ namespace GameLogic
 	void DrawTestMap::onEvent(const SDL_Event& e)
 	{
 	}
-} */
+} 

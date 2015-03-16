@@ -45,7 +45,7 @@ namespace GameLogic
 		}
 	}
 
-	void Hero::initDrawableElements()
+	void Hero::initDrawableElements(SDL_Renderer* renderer)
 	{
 		SDL_Texture* newTexture = NULL;
 		SDL_Surface* loadedSurface = IMG_Load(texturePath.c_str());
@@ -57,7 +57,7 @@ namespace GameLogic
 		else
 		{
 			//Convert surface to screen format
-			newTexture = SDL_CreateTextureFromSurface(m_renderer, loadedSurface);
+			newTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
 			if (newTexture == NULL)
 			{
 				std::cout << "Unable to load image " << texturePath.c_str() << "! SDL_image Error: " << SDL_GetError() << "\n" << std::endl;
@@ -69,16 +69,18 @@ namespace GameLogic
 
 		m_texture = newTexture;
 	}
-	void Hero::draw()
+	void Hero::draw(SDL_Renderer* renderer)
 	{
-		SDL_RenderCopy(m_renderer, m_texture, NULL, &m_box);
-		SDL_RenderDrawRect(m_renderer, &m_box);
-		SDL_RenderPresent(m_renderer);
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+		SDL_RenderClear(renderer);
+		SDL_RenderCopy(renderer, m_texture, NULL, &m_box);
+		SDL_RenderDrawRect(renderer, &m_box);
+		SDL_RenderPresent(renderer);
 	}
 
-	void Hero::setHeroWindowSettings(SDL_Window* window, SDL_Renderer* renderer)
+	/*void Hero::setHeroWindowSettings(SDL_Window* window, SDL_Renderer* renderer)
 	{
 		m_window = window;
 		m_renderer = renderer;
-	}
+	}*/
 }

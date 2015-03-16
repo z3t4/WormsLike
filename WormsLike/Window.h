@@ -16,6 +16,7 @@ namespace Engine
 		Window();
 		~Window();
 		int start();
+
 	private:
 		int init();
 		int close();

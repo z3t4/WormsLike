@@ -11,9 +11,9 @@ namespace Engine
 	{
 	public:
 		virtual void onEvent(const SDL_Event& e) =0;
-		virtual void initDrawableElements() = 0;
-		virtual void draw() = 0;
-		virtual void setWindowSettings(SDL_Window* window, SDL_Renderer* renderer) = 0;
+		virtual void initDrawableElements(SDL_Renderer* renderer) = 0;
+		virtual void draw(SDL_Renderer* renderer) = 0;
+
 	};
 }
 

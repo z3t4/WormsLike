@@ -12,22 +12,7 @@ namespace GameLogic
 
 	public:
 		virtual int moveCharacter(SDL_Event e) = 0;
-		/*virtual void setBoxX(int x)
-		{
-			m_box= x;
-		}
-		virtual void setBoxY(int y)
-		{
-
-		}
-		virtual void setBoxH(int h)
-		{
-
-		}
-		virtual void setBoxW(int w)
-		{
-
-		} */
+		
 
 	private:
 
