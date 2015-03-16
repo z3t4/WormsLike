@@ -19,19 +19,18 @@ namespace GameLogic
 			Background
 		};
 
-		BackgroundElement(Type type, int x, int y, int sizeX, int sizeY, const std::string& imagePath);
+		BackgroundElement(Type type, int x, int y, int sizeX, int sizeY, const std::string& textureName);
 		~BackgroundElement();
 		inline SDL_Rect getRect() const { return position; }
 		inline Type getType() const { return type; }
-		inline std::string getImagePath() const { return imagePath; }
+		inline std::string getTextureName() const { return textureName; }
 		virtual void initDrawableElements(SDL_Renderer* renderer);
 		virtual void draw(SDL_Renderer* renderer);
 
 	protected:
 		SDL_Rect position;
 		Type type;
-		std::string imagePath;
-		SDL_Renderer* renderer;
+		std::string textureName;
 		SDL_Texture* texture;
 
 	};

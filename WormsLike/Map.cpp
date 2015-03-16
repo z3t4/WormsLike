@@ -1,4 +1,5 @@
 #include "Map.h"
+#include "RessourceLoader.h"
 
 namespace GameLogic
 {
@@ -11,6 +12,7 @@ namespace GameLogic
 
 	Map::~Map()
 	{
+		if (textureMap) SDL_DestroyTexture(textureMap);
 		for (BackgroundElement* element : this->elements)
 		{
 			delete element;
@@ -19,6 +21,7 @@ namespace GameLogic
 
 	void Map::initDrawableElements(SDL_Renderer* renderer)
 	{
+		textureMap = Engine::RessourceLoader::loadTexture(backgroundPath, renderer);
 		for (BackgroundElement* element : this->elements)
 		{
 			element->initDrawableElements(renderer);
@@ -27,6 +30,7 @@ namespace GameLogic
 
 	void Map::draw(SDL_Renderer* renderer)
 	{
+		SDL_RenderCopy(renderer, textureMap, NULL, NULL);
 		for (BackgroundElement* element : this->elements)
 		{
 			element->draw(renderer);

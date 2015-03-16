@@ -1,18 +1,18 @@
 #include "BackgroundElement.h"
 #include <string>
+#include "RessourceLoader.h"
 
 namespace GameLogic
 {
 	BackgroundElement::BackgroundElement(BackgroundElement::Type type, int x, int y,
-		int sizeX, int sizeY, const std::string& imagePath)
+		int sizeX, int sizeY, const std::string& textureName)
 	{
 		this->type = type;
-		this->imagePath = imagePath;
+		this->textureName = textureName;
 		this->position.x = x;
 		this->position.y = y;
 		this->position.w = sizeX;
 		this->position.h = sizeY;
-		this->renderer = renderer;
 	}
 
 	BackgroundElement::~BackgroundElement()
@@ -22,15 +22,12 @@ namespace GameLogic
 
 	void BackgroundElement::initDrawableElements(SDL_Renderer* renderer)
 	{
-		SDL_Surface* loadingSurf = SDL_LoadBMP(imagePath.c_str());
-		if (!loadingSurf) throw std::exception("Bad image : Surface not loaded");
-		texture = SDL_CreateTextureFromSurface(renderer, loadingSurf);
-		if (!texture) throw std::exception("Bad surface : Texture not loaded");
-		SDL_FreeSurface(loadingSurf);
+		texture = Engine::RessourceLoader::loadTexture(textureName, renderer);
 	}
 
 	void BackgroundElement::draw(SDL_Renderer* renderer)
 	{
 		SDL_RenderCopy(renderer, texture, NULL, &position);
+		SDL_RenderDrawRect(renderer, &position);
 	}
 }

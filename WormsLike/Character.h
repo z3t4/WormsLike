@@ -11,7 +11,7 @@ namespace GameLogic
 	{
 
 	public:
-		virtual int moveCharacter(SDL_Event e) = 0;
+		virtual void onEvent(SDL_Event e) = 0;
 		
 
 	private:

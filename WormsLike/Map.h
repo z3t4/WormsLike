@@ -27,6 +27,7 @@ namespace GameLogic
 		std::string name;
 		std::string backgroundPath;
 		std::vector<BackgroundElement*> elements;
+		SDL_Texture* textureMap;
 	};
 }
 

@@ -11,7 +11,7 @@ namespace GameLogic
 	{
 	public : 
 		Hero::Hero(int x, int y);
-		virtual int moveCharacter(SDL_Event e);
+		virtual void onEvent(SDL_Event e);
 		virtual void initDrawableElements(SDL_Renderer* renderer);
 		virtual void draw(SDL_Renderer* renderer);
 

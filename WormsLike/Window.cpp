@@ -19,8 +19,8 @@ namespace Engine
 	SDL_Window* gWindow = NULL;
 	SDL_Surface* gScreenSurface = NULL;
 
-	Window::Window() : window(new GameLogic::TestHero())
-	//Window::Window() : window(new GameLogic::DrawTestMap())
+	//Window::Window() : window(new GameLogic::TestHero())
+	Window::Window() : window(new GameLogic::DrawTestMap())
 	{
 		
 	}
@@ -49,11 +49,9 @@ namespace Engine
 				{
 					quit = true;
 				}
-
 			 	window->onEvent(e);
-				window->draw(mainRenderer);
 			}
-
+			window->draw(mainRenderer);
 		}
 		this->close();
 		return 0;

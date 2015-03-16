@@ -66,6 +66,12 @@
     <ClCompile Include="DrawTestMap.cpp">
       <Filter>Fichiers sources\GameLogic\DevScenario</Filter>
     </ClCompile>
+    <ClCompile Include="TestHero.cpp">
+      <Filter>Fichiers sources\GameLogic\DevScenario</Filter>
+    </ClCompile>
+    <ClCompile Include="RessourceLoader.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GraphicalElement.h">
@@ -108,6 +114,12 @@
       <Filter>Fichiers d%27en-tête\GameLogic\DevScenario</Filter>
     </ClInclude>
     <ClInclude Include="Drawable.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="TestHero.h">
+      <Filter>Fichiers d%27en-tête\GameLogic\DevScenario</Filter>
+    </ClInclude>
+    <ClInclude Include="RessourceLoader.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
   </ItemGroup>

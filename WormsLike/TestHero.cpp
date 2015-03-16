@@ -23,7 +23,7 @@ namespace GameLogic
 
 		if (e.type == SDL_KEYDOWN)
 		{
-			m_hero.moveCharacter(e);
+			m_hero.onEvent(e);
 		}
 	}
 }

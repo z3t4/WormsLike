@@ -2,6 +2,7 @@
 #define _DRAWTESTMAP_H
 
 #include "Map.h"
+#include "Hero.h"
 #include "ScenarioWindow.h"
 
 namespace GameLogic
@@ -14,7 +15,8 @@ namespace GameLogic
 		virtual void initDrawableElements(SDL_Renderer* renderer);
 		virtual void draw(SDL_Renderer* renderer);
 	private:
-		GameLogic::Map m_map;
+		GameLogic::Map map;
+		GameLogic::Hero hero;
 	};
 }
 #endif 

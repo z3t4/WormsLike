@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)\Libs\SDL2-2.0.3\include;$(ProjectDir)\Libs\tinyxml;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;$(ProjectDir)\Libs\tinyxml\Releasetinyxml;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\Libs\SDL2_image-2.0.0\include;$(ProjectDir)\Libs\SDL2-2.0.3\include;$(ProjectDir)\Libs\tinyxml;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libs\SDL2_image-2.0.0\lib\x86;$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;$(ProjectDir)\Libs\tinyxml\Releasetinyxml;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -50,7 +50,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)\Libs\SDL2-2.0.3\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -79,7 +79,9 @@
     <ClCompile Include="MenuWindow.cpp" />
     <ClCompile Include="Renderer.h" />
     <ClCompile Include="GameWindow.h" />
+    <ClCompile Include="RessourceLoader.cpp" />
     <ClCompile Include="Rope.cpp" />
+    <ClCompile Include="TestHero.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,8 +95,10 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapLoader.h" />
     <ClInclude Include="MenuWindow.h" />
+    <ClInclude Include="RessourceLoader.h" />
     <ClInclude Include="Rope.h" />
     <ClInclude Include="ScenarioWindow.h" />
+    <ClInclude Include="TestHero.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="GraphicalElement.h" />
   </ItemGroup>
